@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TrackPetition · Decks</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#070B16;--ink:#EAF0FF;--muted:#93A0C0;--line:rgba(255,255,255,.1);--line2:rgba(255,255,255,.16);
+  --panel:rgba(255,255,255,.04);--blue:#3D8BFF;--cyan:#5AD1FF;--emerald:#2FCF95;--gold:#F5C25B;
+  --fh:'Space Grotesk',sans-serif;--fb:'Inter',sans-serif}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--fb);min-height:100vh;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;padding:40px 24px;position:relative;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0;z-index:0;
+  background:radial-gradient(60vw 60vw at 80% -10%,rgba(61,139,255,.20),transparent 60%),radial-gradient(50vw 50vw at 10% 110%,rgba(47,207,149,.14),transparent 60%)}
+.wrap{position:relative;z-index:1;width:100%;max-width:920px;text-align:center}
+.logo{display:inline-flex;align-items:center;gap:12px;margin-bottom:26px}
+.g{width:44px;height:44px;border-radius:12px;background:linear-gradient(120deg,#5AD1FF,#3D8BFF);display:grid;place-items:center;box-shadow:0 10px 30px rgba(61,139,255,.35)}
+.g svg{width:24px;height:24px}
+.word{font-family:var(--fh);font-weight:700;font-size:22px}.word span{color:var(--cyan)}
+h1{font-family:var(--fh);font-weight:700;font-size:clamp(32px,6vw,60px);letter-spacing:-.02em;line-height:1.05}
+h1 span{background:linear-gradient(120deg,#5AD1FF,#3D8BFF,#8B7BFF);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.sub{color:var(--muted);font-size:clamp(15px,2vw,19px);margin-top:16px;max-width:52ch;margin-inline:auto;line-height:1.5}
+.cards{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:44px}
+@media(max-width:720px){.cards{grid-template-columns:1fr}}
+a.card{display:block;text-align:left;text-decoration:none;color:inherit;background:var(--panel);border:1px solid var(--line);
+  border-radius:20px;padding:30px;transition:transform .25s,border-color .25s,background .25s;position:relative;overflow:hidden}
+a.card:hover{transform:translateY(-5px);border-color:var(--line2);background:rgba(255,255,255,.06)}
+.tag{display:inline-block;font-family:var(--fh);font-size:11px;letter-spacing:.18em;text-transform:uppercase;
+  padding:5px 12px;border-radius:100px;border:1px solid var(--line2);margin-bottom:20px}
+.card.pitch .tag{color:var(--cyan)}
+.card.comm .tag{color:var(--emerald)}
+.card h2{font-family:var(--fh);font-weight:600;font-size:clamp(20px,2.6vw,27px);letter-spacing:-.01em}
+.card p{color:var(--muted);font-size:14.5px;line-height:1.5;margin-top:10px}
+.meta{display:flex;align-items:center;gap:8px;margin-top:22px;font-family:var(--fh);font-size:13px;color:var(--ink)}
+.meta .arrow{transition:transform .25s}a.card:hover .meta .arrow{transform:translateX(5px)}
+.card::after{content:"";position:absolute;top:0;left:0;right:0;height:3px}
+.card.pitch::after{background:linear-gradient(90deg,#5AD1FF,#3D8BFF)}
+.card.comm::after{background:linear-gradient(90deg,#7BFFC9,#2FCF95)}
+.foot{margin-top:40px;color:rgba(255,255,255,.32);font-family:var(--fh);font-size:12px;letter-spacing:.04em}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="logo">
+    <span class="g"><svg viewBox="0 0 24 24" fill="none" stroke="#04101f" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/><path d="M11 8v3l2 2"/></svg></span>
+    <span class="word">Track<span>Petition</span></span>
+  </div>
+  <h1>Presentation <span>decks</span></h1>
+  <p class="sub">Two interactive, animated presentations. Use ← → or space to navigate. Click a card to open in fullscreen.</p>
+  <div class="cards">
+    <a class="card pitch" href="trackpetition-pitch.html">
+      <span class="tag">Sales Pitch · EN</span>
+      <h2>TrackPetition for Law Firms</h2>
+      <p>Commercial deck: the paralegal bottleneck, the solution, white-label portal, pricing, ROI and onboarding. 9 slides.</p>
+      <div class="meta">Open deck <span class="arrow">→</span></div>
+    </a>
+    <a class="card comm" href="trackpetition-comisiones.html">
+      <span class="tag">Comisiones · ES</span>
+      <h2>Plan de Comisiones B2B</h2>
+      <p>Documento interno para el representante: base neta, esquema mensual y anual, y cláusulas de protección. 5 láminas.</p>
+      <div class="meta">Abrir deck <span class="arrow">→</span></div>
+    </a>
+  </div>
+  <div class="foot">Internal &amp; commercial materials · startup58</div>
+</div>
+</body>
+</html>
